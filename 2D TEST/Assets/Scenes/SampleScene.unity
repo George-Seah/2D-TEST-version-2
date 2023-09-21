@@ -205,9 +205,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   verticalPosition: 0
   speed: 5
-  jumpAmount: 10
   gravityScale: 10
   fallingGravityScale: 40
+  buttonTime: 0.3
+  jumpAmount: 10
 --- !u!23 &9978116
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1134,9 +1135,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   verticalPosition: 0
   speed: 5
-  jumpAmount: 35
   gravityScale: 10
   fallingGravityScale: 15
+  buttonTime: 0.3
+  jumpAmount: 30
 --- !u!114 &2025981504
 MonoBehaviour:
   m_ObjectHideFlags: 0
