@@ -14,17 +14,35 @@ public class PlayerBehavior : MonoBehaviour
     public float gravityScale = 10;
     public float fallingGravityScale = 40;
     public float buttonTime = 0.3f;
-    float jumpTime;
+    float jumpTime = 0;
     bool jumping;
     
     public float jumpAmount = 1.25f;
 
     float jumpForce;
 
+    bool jumpCancelled;
+
+
+    public float distanceToCheck = 0.5f;
+    //public bool isGrounded;//Used in original groundCheck pre-LayerMask
+    public bool isGrounded(){
+        if(Physics2D.BoxCast(transform.position, boxSize, 0, -transform.up, castDistance, groundLayer)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    public Vector2 boxSize;
+    public float castDistance;
+    public LayerMask groundLayer;
+    //GroundCheck2D gCheck;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        //groundCheck = GetComponent<GroundCheck2D>();
         jumpForce = Mathf.Sqrt(jumpAmount * -2 * (Physics2D.gravity.y * rb.gravityScale));
     }
 
@@ -33,19 +51,22 @@ public class PlayerBehavior : MonoBehaviour
     {
         horizontalAxis = Input.GetAxis("Horizontal");
         transform.position += new Vector3(horizontalAxis * Time.deltaTime * speed, 0, 0);
-        if(Input.GetKeyDown(KeyCode.Space)){
-            rb.AddForce(Vector2.up * jumpAmount, ForceMode2D.Impulse);
+        if(Input.GetKeyDown(KeyCode.Space) && isGrounded()){
+            //rb.AddForce(Vector2.up * jumpAmount, ForceMode2D.Impulse);
             jumping = true;
             jumpTime = 0;
             
-        }
-        if(Input.GetKeyUp(KeyCode.Space) | jumpTime > buttonTime){
-            jumping = false;
         }
         if(jumping){
             //rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             rb.velocity = new Vector2(rb.velocity.x, jumpAmount);
             jumpTime += Time.deltaTime;
+            if(Input.GetKeyUp(KeyCode.Space)){
+                jumpCancelled = true;
+            }
+        }
+        if(Input.GetKeyUp(KeyCode.Space) | jumpTime > buttonTime){
+            jumping = false;
         }
         if(rb.velocity.y >= 0){
             rb.gravityScale = gravityScale;
@@ -53,6 +74,43 @@ public class PlayerBehavior : MonoBehaviour
         else if(rb.velocity.y < 0){
             rb.gravityScale = fallingGravityScale;
         }
-        
+        //Unfinished Raycast isGrounded option
+        /*
+        if(Physics2D.Raycast(transform.position, Vector2.down, distanceToCheck)){
+            isGrounded = true;
+        }
+        else{
+            isGrounded = false;
+        }
+        */
     }
+    void FixedUpdate(){
+        if(jumpCancelled && jumping && rb.velocity.y > 0){
+            rb.AddForce(Vector2.down * 100);
+        }
+    }
+
+
+
+    private void OnDrawGizmos(){
+        Gizmos.DrawWireCube(transform.position-transform.up * castDistance, boxSize);
+    }
+    //Defunct collision detection code
+    /*
+    private void OnCollisionEnter2D(Collision2D other){
+        
+        if(other.gameObject.CompareTag("Ground")){
+            Vector3 normal = other.GetContact(0).normal;
+            if(normal == Vector3.up){
+                isGrounded = true;
+            }
+            
+        }
+    }
+    private void OnCollisionExit2D(Collision2D other){
+        if(other.gameObject.CompareTag("Ground")){
+            isGrounded = false;
+        }
+    }
+    */
 }
