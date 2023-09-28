@@ -348,6 +348,8 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/CharacterAnimator.cs"
 "Assets/Scripts/PlayerBehavior.cs"
+"Assets/Scripts/PlayerDeath.cs"
+"Assets/Scripts/PlayerHealth.cs"
 -langversion:9.0
 
 /deterministic
