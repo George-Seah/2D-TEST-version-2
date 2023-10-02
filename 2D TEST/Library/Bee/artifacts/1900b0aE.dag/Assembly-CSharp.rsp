@@ -350,7 +350,6 @@
 "Assets/Scripts/EnemyDamage.cs"
 "Assets/Scripts/HealthUI.cs"
 "Assets/Scripts/PlayerBehavior.cs"
-"Assets/Scripts/PlayerDeath.cs"
 "Assets/Scripts/PlayerHealth.cs"
 -langversion:9.0
 

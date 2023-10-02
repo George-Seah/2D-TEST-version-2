@@ -1241,7 +1241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fa49e517f977c4ea614727d5e62b8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 2
 --- !u!1 &1791350096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1627,7 +1627,6 @@ GameObject:
   - component: {fileID: 2025981505}
   - component: {fileID: 2025981503}
   - component: {fileID: 2025981504}
-  - component: {fileID: 2025981507}
   - component: {fileID: 2025981508}
   m_Layer: 0
   m_Name: Player
@@ -1811,18 +1810,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2025981507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2025981498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f78af107618ae5499f3f894b7df2ed4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2025981508
 MonoBehaviour:
   m_ObjectHideFlags: 0
