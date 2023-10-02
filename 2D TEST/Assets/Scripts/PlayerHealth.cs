@@ -6,14 +6,15 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 5;
-    public int currentHealth;
+    public static int currentHealth = 3;
 
-    public Animator anim;
+    private Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = 3;
+        anim = GetComponent<Animator>();
     }
 
     public void TakeDamage(int amount){

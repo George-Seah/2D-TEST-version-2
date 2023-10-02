@@ -26,6 +26,11 @@ public class PlayerBehavior : MonoBehaviour
 
     public float distanceToCheck = 0.5f;
 
+    public float KBForce;
+    public float KBCounter;
+    public float KBTotalTime;
+
+    public bool KnockFromRight;
     public static bool alive = true;
     //public bool isGrounded;//Used in original groundCheck pre-LayerMask
     public bool isGrounded(){
@@ -52,8 +57,19 @@ public class PlayerBehavior : MonoBehaviour
     void Update()
     {
         horizontalAxis = Input.GetAxis("Horizontal");
-        if(alive)
+        if(alive && KBCounter <= 0){
             transform.position += new Vector3(horizontalAxis * Time.deltaTime * speed, 0, 0);
+        }
+        else{
+            if(KnockFromRight){
+                rb.velocity = new Vector2(-KBForce, KBForce);
+            }
+            if(!KnockFromRight){
+                rb.velocity = new Vector2(KBForce, KBForce);
+            }
+            KBCounter -= Time.deltaTime;
+        }
+
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded()){
             //rb.AddForce(Vector2.up * jumpAmount, ForceMode2D.Impulse);
             jumping = true;

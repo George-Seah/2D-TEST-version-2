@@ -32,5 +32,6 @@ public class PlayerDeath : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Debug.Log("Lever has restarted.");
         PlayerBehavior.alive = true;
+        rb.bodyType = RigidbodyType2D.Dynamic;
     }
 }
