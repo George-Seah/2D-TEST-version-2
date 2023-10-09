@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 4352275792323000766}
   - component: {fileID: 4352275792323000767}
   - component: {fileID: 4352275792323000765}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mask Dude
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
