@@ -348,6 +348,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/CharacterAnimator.cs"
 "Assets/Scripts/EnemyDamage.cs"
+"Assets/Scripts/EnemyWeakpoint.cs"
 "Assets/Scripts/HealthUI.cs"
 "Assets/Scripts/PlayerBehavior.cs"
 "Assets/Scripts/PlayerHealth.cs"
