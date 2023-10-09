@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 5;
-    public static int currentHealth = 3;
+    public static int currentHealth = 5;
     
     private Rigidbody2D rb;
     private Animator anim;
@@ -21,13 +21,15 @@ public class PlayerHealth : MonoBehaviour
     }
 
     public void TakeDamage(int amount){
-        currentHealth -= amount;
+        if(!PlayerBehavior.invulnerable){
+            currentHealth -= amount;
 
-        if(currentHealth <= 0){
-            //Player is dead
-            //Play Death Animation
-            //Show GameOver screen
-            Die();
+            if(currentHealth <= 0){
+                //Player is dead
+                //Play Death Animation
+                //Show GameOver screen
+                Die();
+            }
         }
     }
 

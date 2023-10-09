@@ -29,7 +29,8 @@ public class EnemyDamage : MonoBehaviour
             if(collision.transform.position.x > transform.position.x)
                 playerBehavior.KnockFromRight = false;
 
-            playerHealth.TakeDamage(damage);
+            if(!PlayerBehavior.invulnerable)
+                playerHealth.TakeDamage(damage);
             //collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
 
         }
