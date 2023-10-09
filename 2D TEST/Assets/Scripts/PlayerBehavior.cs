@@ -32,10 +32,6 @@ public class PlayerBehavior : MonoBehaviour
 
     public bool KnockFromRight;
     public static bool alive = true;
-
-    Renderer rend;
-    Color c;
-    [SerializeField] public static bool invulnerable = false;
     //public bool isGrounded;//Used in original groundCheck pre-LayerMask
     public bool isGrounded(){
         if(Physics2D.BoxCast(transform.position, boxSize, 0, -transform.up, castDistance, groundLayer)){
@@ -53,8 +49,6 @@ public class PlayerBehavior : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rend = GetComponent<Renderer>();
-		c = rend.material.color;
         //groundCheck = GetComponent<GroundCheck2D>();
         jumpForce = Mathf.Sqrt(jumpAmount * -2 * (Physics2D.gravity.y * rb.gravityScale));
     }
@@ -116,26 +110,7 @@ public class PlayerBehavior : MonoBehaviour
     }
 
 
-	void OnTriggerEnter2D (Collider2D collision)
-	{
-		if (collision.gameObject.tag == "Trap" && PlayerHealth.currentHealth > 0)
-			StartCoroutine ("GetInvulnerable");
-            Debug.Log("OnTriggerEnter2D - Should be invulnerable");
-	}
-	IEnumerator GetInvulnerable()
-	{
-		//Physics2D.IgnoreLayerCollision (8, 9, true);
-        invulnerable = true;
-		c.a = 0.5f;
-		rend.material.color = c;
-        Debug.Log("IEnumerator GetInvulnerable - Should be invulnerable");
-		yield return new WaitForSeconds (3f);
-        invulnerable = false;
-		//Physics2D.IgnoreLayerCollision (8, 9, false);
-		c.a = 1f;
-		rend.material.color = c;
-        Debug.Log("IEnumerator GetInvulnerable - Should not be invulnerable");
-	}
+
     private void OnDrawGizmos(){
         Gizmos.DrawWireCube(transform.position-transform.up * castDistance, boxSize);
     }
