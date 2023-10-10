@@ -1784,7 +1784,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025981498}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.29, y: 3.63, z: -0.059660066}
+  m_LocalPosition: {x: -5.35, y: 3.17, z: -0.059660066}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1932,11 +1932,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4352275792323000752, guid: d9931513fdf2bec4abfb8f3dd08cd69b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.94
+      value: -8.65
       objectReference: {fileID: 0}
     - target: {fileID: 4352275792323000752, guid: d9931513fdf2bec4abfb8f3dd08cd69b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.95
+      value: 1.29
       objectReference: {fileID: 0}
     - target: {fileID: 4352275792323000752, guid: d9931513fdf2bec4abfb8f3dd08cd69b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1973,6 +1973,26 @@ PrefabInstance:
     - target: {fileID: 4352275792323000755, guid: d9931513fdf2bec4abfb8f3dd08cd69b, type: 3}
       propertyPath: m_Name
       value: Mask Dude
+      objectReference: {fileID: 0}
+    - target: {fileID: 4352275793577931353, guid: d9931513fdf2bec4abfb8f3dd08cd69b, type: 3}
+      propertyPath: boxSize.x
+      value: 1.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 4352275793577931353, guid: d9931513fdf2bec4abfb8f3dd08cd69b, type: 3}
+      propertyPath: boxSize.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4352275793577931353, guid: d9931513fdf2bec4abfb8f3dd08cd69b, type: 3}
+      propertyPath: position.x
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 4352275793577931353, guid: d9931513fdf2bec4abfb8f3dd08cd69b, type: 3}
+      propertyPath: position.y
+      value: -0.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 4352275793577931353, guid: d9931513fdf2bec4abfb8f3dd08cd69b, type: 3}
+      propertyPath: castDistance
+      value: 1.56
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9931513fdf2bec4abfb8f3dd08cd69b, type: 3}
