@@ -169,8 +169,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00ba2e7c3d8bc644da9207a3c8dc096a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxSize: {x: 1.62, y: 0.52}
-  castDistance: 1.01
+  position: {x: 0.08, y: -0.56, z: 0}
+  boxSize: {x: 1.71, y: 0.25}
+  castDistance: 1.56
+  jumpAmount: 30
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -187,3 +189,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  damageGiving: 1

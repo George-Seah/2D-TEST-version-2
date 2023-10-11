@@ -7,8 +7,10 @@ public class EnemyWeakpoint : MonoBehaviour
     public Vector3 position;
     public Vector2 boxSize;
     public float castDistance;
+    public float jumpAmount;
     public LayerMask playerLayer;
     private EnemyDamage enemyDamage;
+    private Animator anim;
     // Start is called before the first frame update
     public bool isStomped(){
         if(Physics2D.BoxCast(transform.position + position, boxSize, 0, transform.up, castDistance, playerLayer)){
@@ -21,6 +23,7 @@ public class EnemyWeakpoint : MonoBehaviour
     void Start()
     {
         enemyDamage = GetComponent<EnemyDamage>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -43,20 +46,23 @@ public class EnemyWeakpoint : MonoBehaviour
         //collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(collision.rigidbody.velocity.x, 5);
 
         if(isStomped()){
+            anim.SetBool("Stomped", true);
+            Debug.Log("Stomped, should be true.");
             enemyDamage.damageGiving = false;
             Debug.Log("enemyDamage.damageGiving = false");
-            Destroy(gameObject);
-            Debug.Log("Mask Dude should be killed.");
-            /*
-            collision.rigidbody.velocity = new Vector2(collision.rigidbody.velocity.x, 15);
+            collision.rigidbody.velocity = new Vector2(collision.rigidbody.velocity.x, jumpAmount);
             Debug.Log("Player should bounce off enemy.");
-            */
+            
             
             //playerLayer.rigidbody.velocity = new Vector2(0f, 15f);
             
 
             
         }
+    }
+    private void DestroySelf(){
+            Destroy(gameObject);
+            Debug.Log("Mask Dude should be killed.");
     }
     private void OnDrawGizmos(){
         Gizmos.DrawWireCube((transform.position+position)+transform.up * castDistance, boxSize);
