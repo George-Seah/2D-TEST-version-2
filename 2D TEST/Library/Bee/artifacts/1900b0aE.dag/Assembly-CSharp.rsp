@@ -349,6 +349,7 @@
 "Assets/Scripts/CharacterAnimator.cs"
 "Assets/Scripts/EnemyDamage.cs"
 "Assets/Scripts/EnemyWeakpoint.cs"
+"Assets/Scripts/HealthPickup.cs"
 "Assets/Scripts/HealthUI.cs"
 "Assets/Scripts/PlayerBehavior.cs"
 "Assets/Scripts/PlayerHealth.cs"

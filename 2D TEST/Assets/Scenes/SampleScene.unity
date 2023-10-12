@@ -705,6 +705,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &910214605
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8914121533697903643, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_Name
+      value: Heart Pickup (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -914,6 +971,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9931513fdf2bec4abfb8f3dd08cd69b, type: 3}
+--- !u!1001 &1057689883
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8914121533697903643, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_Name
+      value: Heart Pickup (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
 --- !u!1 &1192733097
 GameObject:
   m_ObjectHideFlags: 0
@@ -2204,3 +2318,60 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9830e2ed4f9429478cf5356671c5c2a, type: 3}
+--- !u!1001 &8914121532984373657
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8914121533697903643, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_Name
+      value: Heart Pickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914121533697903645, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c2d3905aab29ab64fa13edc7c79d6dca, type: 3}
