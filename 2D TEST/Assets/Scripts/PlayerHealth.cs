@@ -8,7 +8,7 @@ public class PlayerHealth : MonoBehaviour
 {
     [Header ("Health")]
     public int maxHealth = 5;
-    public static int currentHealth = 3;
+    public static int currentHealth = 5;
     
     private Rigidbody2D rb;
     private Animator anim;

@@ -61,8 +61,8 @@ public class EnemyWeakpoint : MonoBehaviour
         }
     }
     private void DestroySelf(){
+            Debug.Log($"{gameObject} should be killed.");
             Destroy(gameObject);
-            Debug.Log("Mask Dude should be killed.");
     }
     private void OnDrawGizmos(){
         Gizmos.DrawWireCube((transform.position+position)+transform.up * castDistance, boxSize);
