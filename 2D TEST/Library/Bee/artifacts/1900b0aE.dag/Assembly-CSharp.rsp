@@ -354,6 +354,8 @@
 "Assets/Scripts/HealthUI.cs"
 "Assets/Scripts/PlayerBehavior.cs"
 "Assets/Scripts/PlayerHealth.cs"
+"Assets/Scripts/Projectile.cs"
+"Assets/Scripts/ProjectileLaunch.cs"
 -langversion:9.0
 
 /deterministic

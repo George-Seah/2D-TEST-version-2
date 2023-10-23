@@ -25,7 +25,9 @@ public class EnemyWeakpoint : MonoBehaviour
         enemyDamage = GetComponent<EnemyDamage>();
         anim = GetComponent<Animator>();
     }
-
+    public void playDefeat(){
+        anim.SetBool("Stomped", true);
+    }
     // Update is called once per frame
     void Update()
     {
