@@ -9,7 +9,7 @@ public class ProjectileLaunch : MonoBehaviour
     public GameObject player;
     public float shootTime;
     public float shootCounter;
-
+    public float playerDistance;
     public SpriteRenderer spriteRend;
 
     Quaternion projectileRotation;
@@ -30,7 +30,7 @@ public class ProjectileLaunch : MonoBehaviour
             //transform.position.x *= -1;
             //if(transform.position.x > 0){
                 //transform.position.x = -1.25f;
-                launchPoint.position = new Vector3(-1.25f + player.transform.position.x, transform.position.y, transform.position.z);
+                launchPoint.position = new Vector3(-playerDistance + player.transform.position.x, transform.position.y, transform.position.z);
             //}
                 
                 
@@ -41,7 +41,7 @@ public class ProjectileLaunch : MonoBehaviour
             //gameObject.transform.rotation = projectileRotation;
             //transform.position.x *= -1;
             //if(transform.position.x < 0){
-                launchPoint.position = new Vector3(1.25f + player.transform.position.x, transform.position.y, transform.position.z);
+                launchPoint.position = new Vector3(playerDistance + player.transform.position.x, transform.position.y, transform.position.z);
             //}
                 //transform.position = new Vector3(1.25f, transform.position.y, transform.position.z);
         }

@@ -6,7 +6,7 @@ public class CharacterAnimator : MonoBehaviour
 {
 
     Animator anim;
-    SpriteRenderer spriteRend;
+    public SpriteRenderer spriteRend;
     // Start is called before the first frame update
     void Start()
     {
