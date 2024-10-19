@@ -356,6 +356,7 @@
 "Assets/Scripts/PlayerHealth.cs"
 "Assets/Scripts/Projectile.cs"
 "Assets/Scripts/ProjectileLaunch.cs"
+"Assets/Scripts/Sword.cs"
 -langversion:9.0
 
 /deterministic

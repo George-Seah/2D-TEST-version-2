@@ -2176,7 +2176,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025981498}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.09, y: 5.53, z: -0.059660066}
+  m_LocalPosition: {x: 0.09, y: 4.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2198,10 +2198,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   verticalPosition: 0
-  speed: 5
+  speed: 7.5
   gravityScale: 10
-  fallingGravityScale: 15
-  buttonTime: 0.3
+  fallingGravityScale: 12.5
+  buttonTime: 0.4
   jumpAmount: 15
   distanceToCheck: 0.5
   KBForce: 6

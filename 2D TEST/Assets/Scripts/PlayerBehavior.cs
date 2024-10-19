@@ -32,6 +32,10 @@ public class PlayerBehavior : MonoBehaviour
 
     public bool KnockFromRight;
     public static bool alive = true;
+
+    Animator anim;
+    SpriteRenderer spriteRend;
+
     //public bool isGrounded;//Used in original groundCheck pre-LayerMask
     public bool isGrounded(){
         if(Physics2D.BoxCast(transform.position, boxSize, 0, -transform.up, castDistance, groundLayer)){
@@ -51,10 +55,12 @@ public class PlayerBehavior : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         //groundCheck = GetComponent<GroundCheck2D>();
         jumpForce = Mathf.Sqrt(jumpAmount * -2 * (Physics2D.gravity.y * rb.gravityScale));
+        anim = GetComponent<Animator>();
+        spriteRend = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         horizontalAxis = Input.GetAxis("Horizontal");
         if(alive && KBCounter <= 0){
@@ -76,6 +82,12 @@ public class PlayerBehavior : MonoBehaviour
             jumpTime = 0;
             
         }
+        if(!isGrounded()){
+            anim.SetBool("isJumping", true);
+        }
+        else{
+            anim.SetBool("isJumping", false);
+        }
         if(jumping){
             //rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             rb.velocity = new Vector2(rb.velocity.x, jumpAmount);
@@ -83,6 +95,7 @@ public class PlayerBehavior : MonoBehaviour
             if(Input.GetKeyUp(KeyCode.Space)){
                 jumpCancelled = true;
             }
+            
         }
         if(Input.GetKeyUp(KeyCode.Space) | jumpTime > buttonTime){
             jumping = false;
@@ -92,6 +105,10 @@ public class PlayerBehavior : MonoBehaviour
         }
         else if(rb.velocity.y < 0){
             rb.gravityScale = fallingGravityScale;
+            //anim.SetBool("isJumping", false);//Testing to see. If not working remove this
+        }
+        if(jumpCancelled && jumping && rb.velocity.y > 0){
+            //rb.AddForce(Vector2.down * 100);
         }
         //Unfinished Raycast isGrounded option
         /*
@@ -103,12 +120,13 @@ public class PlayerBehavior : MonoBehaviour
         }
         */
     }
+    /*
     void FixedUpdate(){
         if(jumpCancelled && jumping && rb.velocity.y > 0){
-            rb.AddForce(Vector2.down * 100);
+            //rb.AddForce(Vector2.down * 100);
         }
     }
-
+    */
 
 
     private void OnDrawGizmos(){
