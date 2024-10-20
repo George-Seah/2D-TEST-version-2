@@ -14,14 +14,14 @@ public class PlayerBehavior : MonoBehaviour
     public float gravityScale = 10;
     public float fallingGravityScale = 40;
     public float buttonTime = 0.3f;
-    float jumpTime = 0;
-    bool jumping;
+    [SerializeField] float jumpTime = 0;
+    [SerializeField] bool jumping;
     
     public float jumpAmount = 1.25f;
 
-    float jumpForce;
+    [SerializeField] float jumpForce;
 
-    bool jumpCancelled;
+    [SerializeField] bool jumpCancelled;
 
 
     public float distanceToCheck = 0.5f;
@@ -75,8 +75,8 @@ public class PlayerBehavior : MonoBehaviour
             }
             KBCounter -= Time.deltaTime;
         }
-
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded()){
+        //Input.GetKeyDown(KeyCode.Space) && isGrounded()
+        if(Input.GetKey(KeyCode.Space) && isGrounded()){
             //rb.AddForce(Vector2.up * jumpAmount, ForceMode2D.Impulse);
             jumping = true;
             jumpTime = 0;
@@ -87,17 +87,22 @@ public class PlayerBehavior : MonoBehaviour
         }
         else{
             anim.SetBool("isJumping", false);
+            //jumpCancelled = false;
+
         }
-        if(jumping){
+        if(Input.GetKeyUp(KeyCode.Space)){
+            jumpCancelled = true;
+        }
+        if(!Input.GetKey(KeyCode.Space) && isGrounded()){
+            jumpCancelled = false;
+        }
+        if(jumping && !jumpCancelled){
             //rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             rb.velocity = new Vector2(rb.velocity.x, jumpAmount);
             jumpTime += Time.deltaTime;
-            if(Input.GetKeyUp(KeyCode.Space)){
-                jumpCancelled = true;
-            }
-            
         }
-        if(Input.GetKeyUp(KeyCode.Space) | jumpTime > buttonTime){
+        //Makes the player fall after a certain time frame and makes sure player falls when jump button is released
+        if(jumpCancelled || jumpTime > buttonTime){
             jumping = false;
         }
         if(rb.velocity.y >= 0){

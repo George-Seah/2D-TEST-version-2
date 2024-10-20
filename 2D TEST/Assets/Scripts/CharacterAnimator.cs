@@ -40,7 +40,7 @@ public class CharacterAnimator : MonoBehaviour
         }
 
         if(Input.GetKeyDown(KeyCode.Space)){
-            //anim.SetTrigger("jump");
+            anim.SetTrigger("jump");
         }
     }
 }

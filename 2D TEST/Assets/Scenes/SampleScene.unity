@@ -208,7 +208,11 @@ MonoBehaviour:
   gravityScale: 10
   fallingGravityScale: 40
   buttonTime: 0.3
+  jumpTime: 0
+  jumping: 0
   jumpAmount: 10
+  jumpForce: 0
+  jumpCancelled: 0
   distanceToCheck: 0.5
   KBForce: 0
   KBCounter: 0
@@ -2107,11 +2111,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2025981502}
+  - component: {fileID: 2025981503}
   - component: {fileID: 2025981501}
   - component: {fileID: 2025981500}
   - component: {fileID: 2025981506}
   - component: {fileID: 2025981505}
-  - component: {fileID: 2025981503}
   - component: {fileID: 2025981504}
   - component: {fileID: 2025981508}
   m_Layer: 7
@@ -2176,7 +2180,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025981498}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.09, y: 4.8, z: 0}
+  m_LocalPosition: {x: 0.09, y: 47.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2202,7 +2206,11 @@ MonoBehaviour:
   gravityScale: 10
   fallingGravityScale: 12.5
   buttonTime: 0.4
+  jumpTime: 0
+  jumping: 0
   jumpAmount: 15
+  jumpForce: 0
+  jumpCancelled: 0
   distanceToCheck: 0.5
   KBForce: 6
   KBCounter: 0
